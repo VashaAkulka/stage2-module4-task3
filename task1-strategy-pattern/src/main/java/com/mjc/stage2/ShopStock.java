@@ -10,7 +10,7 @@ public class ShopStock {
         this.productList = productList;
     }
 
-    public List<Product> listExecuteFilteringStrategy(FilteringStrategy filteringStrategy) {
+    public List<Product> executeFilteringStrategy(FilteringStrategy filteringStrategy) {
         return productList.stream().filter(filteringStrategy::filter).collect(Collectors.toList());
     }
 }
