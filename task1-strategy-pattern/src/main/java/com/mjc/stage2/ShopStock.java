@@ -9,5 +9,7 @@ public class ShopStock {
         this.productList = productList;
     }
 
-    // Write your code here!
+    public List<Product> listExecuteFilteringStrategy(FilteringStrategy filteringStrategy) {
+        return productList.stream().filter(filteringStrategy::filter).toList();
+    }
 }
